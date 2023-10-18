@@ -1,0 +1,13 @@
+.button{
+    padding: 1rem;;
+}
+.red{
+    background-color: red;
+}
+.b-rad{
+    border-radius: 0.5rem;
+    border: 3px solid brown;
+}
+.color-white{
+    color:white;
+}
