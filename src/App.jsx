@@ -1,32 +1,61 @@
-import Button from "./components/button/Button";
+
 import Title from "./components/title/Title";
 import Subtitle from "./components/subtitle/Subtitle";
 import Text from "./components/text/Text";
 import Box from "./components/box/Box";
 import { GlobalStyles } from "./styles/GlobalStyles";
+import WrBoxes from "./components/wr-boxes/WrBoxes";
+import Button2 from "./components/button2/Button2";
+import Button3 from "./components/button3/Button3";
+import { useState } from "react";
 
 // <Button text="Botón simple" number="1"/>
 
 const App = () => {
+	const [number, setNumber] = useState(0);
 	return (
 		<>
 			<GlobalStyles/>
+
 			<Title text="Reliable, efficient delivery" />
 			<Subtitle text="Powered by Technology" />
 			<Text text="Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful" />
 			
+			<WrBoxes />
 
-			<Box borderTop="#00c8c8" text1="Subervisor" text2="Monitors activity to identify project roadblocks" src="../public/icon-supervisor.svg"/>
-			<Box borderTop="#ff637b" text1="Team Builder" text2="Scans our talent network to create the optimal team for your project" src="../public/icon-team-builder.svg"/>
-			<Box borderTop="#377fd2" text1="Calculator" text2="Uses data from past projects to provide better delivery estimates" src="../public/icon-calculator.svg"/>
-			<Box borderTop="#fcae4a" text1="Karma" text2="Regularly evaluates our talent to ensure quality" src="../public/icon-karma.svg"/>
+		
+			<h1>Number: {number}</h1>
+
+			<Button3 text='+1' action={()=> increment(number, setNumber)} />
+			<Button3 text='+2' action={()=> increment2(number, setNumber)} />
+			<Button3 text='Reset' action={()=> reset(number, setNumber)} />
+			<Button3 text='-1' action={()=> decrement(number, setNumber)} />
+			<Button3 text='-2' action={()=> decrement2(number, setNumber)} />
+			
+
+			
 			
 		</>
 	);
 	
 };
 
+const increment = (number, setNumber) => {
+    setNumber(number + 1);
+}
+const increment2 = (number, setNumber) => {
+    setNumber(number + 2);
+}
+const decrement = (number, setNumber) => {
+    setNumber(number - 1);
+}
+const decrement2 = (number, setNumber) => {
+    setNumber(number - 2);
+}
 
-//console.log(App());
+const reset = (number, setNumber) => {
+    setNumber(0);
+}
+
 
 export default App;

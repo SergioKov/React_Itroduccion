@@ -2,4 +2,7 @@ h4{
     color: #4D4F62;
     font-size: 36px;
     font-weight: 800;
+    text-align: center;
+    padding: 0.1rem;
+    margin: 0.1rem auto;
 }

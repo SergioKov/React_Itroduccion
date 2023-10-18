@@ -8,7 +8,7 @@ const StyledBox = styled.div`
 	height: 15.625rem;
 	margin: 1rem;
 	box-shadow: 0px 10px 20px 0px #858383;
-	border-top: 5px solid ${props => props.borderTop};
+	border-top: 5px solid ${props => props.bordertop};
 `;
 
 export { StyledBox };
